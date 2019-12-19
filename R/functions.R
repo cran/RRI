@@ -140,7 +140,6 @@ check_model = function(model) {
   with(model, stopifnot(length(y) == nrow(X)))
   with(model, stopifnot(length(lam) == ncol(X)))
   with(model, stopifnot(length(lam0) == 1))
-  stopifnot(class(model$X) == "matrix")
 }
 
 #' An example \code{clustering} object. A clustering is a \code{List} that
@@ -197,7 +196,7 @@ example_clustering = function() {
 #'
 #' @seealso	Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 #'
-#' \url{https://sites.google.com/view/panos-toulis/residual-randomization}
+#' \url{https://www.ptoulis.com/residual-randomization}
 #'
 #' @export
 rrtest = function(model, g_invar, num_R=999, alpha=0.05, val_type="decision") {
@@ -331,7 +330,7 @@ rrtest = function(model, g_invar, num_R=999, alpha=0.05, val_type="decision") {
 #' # Cluster permutation test rejects because inference is sharper.
 #' @seealso	Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 #'
-#' \url{https://sites.google.com/view/panos-toulis/residual-randomization}
+#' \url{https://www.ptoulis.com/residual-randomization}
 #'
 #' @export
 rrtest_clust = function(model, type, clustering=NULL,
@@ -405,12 +404,11 @@ rrtest_clust = function(model, type, clustering=NULL,
 #'
 # @seealso	Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 #'
-#' \url{https://sites.google.com/view/panos-toulis/residual-randomization}
+#' \url{https://www.ptoulis.com/residual-randomization}
 rrinfBase = function(y, X, g_or_clust, cover, num_R, control.tinv) {
 
   # checks
   stopifnot(length(y) == nrow(X))
-  stopifnot(class(X) == "matrix")
   stopifnot(cover <= 1 & cover >= 0)
   #
   p = ncol(X) # number of parameters.
@@ -492,7 +490,7 @@ rrinfBase = function(y, X, g_or_clust, cover, num_R, control.tinv) {
 #' M  # Intervals cover true values
 #' @seealso	Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 #'
-#' \url{https://sites.google.com/view/panos-toulis/residual-randomization}
+#' \url{https://www.ptoulis.com/residual-randomization}
 #'
 #' @export
 rrinf = function(y, X, g_invar, cover=.95, num_R=999,
@@ -555,7 +553,7 @@ rrinf = function(y, X, g_invar, cover=.95, num_R=999,
 #'
 #' @seealso	Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 #'
-#' \url{https://sites.google.com/view/panos-toulis/residual-randomization}
+#' \url{https://www.ptoulis.com/residual-randomization}
 #'
 #' @export
 rrinf_clust = function(y, X, type, clustering=NULL, cover=.95, num_R=999,

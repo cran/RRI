@@ -4,8 +4,7 @@
 \alias{rrtest}
 \title{Generic residual randomization test}
 \usage{
-rrtest(model, g_invar, num_R = 999, alpha = 0.05,
-  val_type = "decision")
+rrtest(model, g_invar, num_R = 999, alpha = 0.05, val_type = "decision")
 }
 \arguments{
 \item{model}{Regression model and hypothesis. See \link{example_model} for details.}
@@ -57,5 +56,5 @@ rrtest(model, g_invar) # same as rrtest_clust(model, "perm")
 \seealso{
 Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 
-\url{https://sites.google.com/view/panos-toulis/residual-randomization}
+\url{https://www.ptoulis.com/residual-randomization}
 }

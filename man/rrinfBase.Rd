@@ -44,5 +44,5 @@ The \code{g_or_clust} object should either be (i) a g-invariance function R^n ->
 a list(type, cl) where type=c("perm", "sign", "double") and cl=\code{clustering} (see \link{example_clustering} for details).
 
 
-\url{https://sites.google.com/view/panos-toulis/residual-randomization}
+\url{https://www.ptoulis.com/residual-randomization}
 }

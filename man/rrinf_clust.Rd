@@ -4,8 +4,15 @@
 \alias{rrinf_clust}
 \title{Residual randomization inference based on cluster invariances}
 \usage{
-rrinf_clust(y, X, type, clustering = NULL, cover = 0.95, num_R = 999,
-  control = list(num_se = 6, num_breaks = 60))
+rrinf_clust(
+  y,
+  X,
+  type,
+  clustering = NULL,
+  cover = 0.95,
+  num_R = 999,
+  control = list(num_se = 6, num_breaks = 60)
+)
 }
 \arguments{
 \item{y}{Vector of outcomes (length n)}
@@ -71,5 +78,5 @@ rrinf_clust(y, X, "perm", cl)  # improved CI through clustered errors
 \seealso{
 Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 
-\url{https://sites.google.com/view/panos-toulis/residual-randomization}
+\url{https://www.ptoulis.com/residual-randomization}
 }

@@ -4,8 +4,14 @@
 \alias{rrinf}
 \title{Generic residual randomization confidence intervals}
 \usage{
-rrinf(y, X, g_invar, cover = 0.95, num_R = 999, control = list(num_se
-  = 6, num_breaks = 60))
+rrinf(
+  y,
+  X,
+  g_invar,
+  cover = 0.95,
+  num_R = 999,
+  control = list(num_se = 6, num_breaks = 60)
+)
 }
 \arguments{
 \item{y}{Vector of outcomes (length n)}
@@ -61,5 +67,5 @@ M  # Intervals cover true values
 \seealso{
 Life after bootstrap: residual randomization inference in regression models (Toulis, 2019)
 
-\url{https://sites.google.com/view/panos-toulis/residual-randomization}
+\url{https://www.ptoulis.com/residual-randomization}
 }
